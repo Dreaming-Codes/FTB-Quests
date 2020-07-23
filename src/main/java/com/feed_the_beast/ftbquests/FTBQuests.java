@@ -37,7 +37,7 @@ import org.apache.logging.log4j.Logger;
 public class FTBQuests
 {
 	public static final String MOD_ID = "ftbquests";
-	public static final String MOD_NAME = "FTB Quests";
+	public static final String MOD_NAME = "FTB Quests Reloaded";
 	public static final String VERSION = "0.0.0.ftbquests";
 	public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 

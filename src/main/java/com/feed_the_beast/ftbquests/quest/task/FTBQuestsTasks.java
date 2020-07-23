@@ -1,13 +1,14 @@
 package com.feed_the_beast.ftbquests.quest.task;
 
 /**
- * @author LatvianModder
+ * @author LatvianModder EDITED BY DreamingCodes
  */
 public class FTBQuestsTasks
 {
 	public static TaskType ITEM;
 	public static TaskType FLUID;
 	public static TaskType FORGE_ENERGY;
+	public static TaskType BIOME;
 	public static TaskType CUSTOM;
 	public static TaskType XP;
 	public static TaskType DIMENSION;

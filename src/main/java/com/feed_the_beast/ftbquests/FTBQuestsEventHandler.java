@@ -41,23 +41,7 @@ import com.feed_the_beast.ftbquests.quest.reward.RewardType;
 import com.feed_the_beast.ftbquests.quest.reward.ToastReward;
 import com.feed_the_beast.ftbquests.quest.reward.XPLevelsReward;
 import com.feed_the_beast.ftbquests.quest.reward.XPReward;
-import com.feed_the_beast.ftbquests.quest.task.AdvancementTask;
-import com.feed_the_beast.ftbquests.quest.task.CheckmarkTask;
-import com.feed_the_beast.ftbquests.quest.task.CustomTask;
-import com.feed_the_beast.ftbquests.quest.task.DimensionTask;
-import com.feed_the_beast.ftbquests.quest.task.FTBQuestsTasks;
-import com.feed_the_beast.ftbquests.quest.task.FluidTask;
-import com.feed_the_beast.ftbquests.quest.task.ForgeEnergyTask;
-import com.feed_the_beast.ftbquests.quest.task.InteractionTask;
-import com.feed_the_beast.ftbquests.quest.task.ItemTask;
-import com.feed_the_beast.ftbquests.quest.task.KillTask;
-import com.feed_the_beast.ftbquests.quest.task.LocationTask;
-import com.feed_the_beast.ftbquests.quest.task.ObservationTask;
-import com.feed_the_beast.ftbquests.quest.task.StatTask;
-import com.feed_the_beast.ftbquests.quest.task.Task;
-import com.feed_the_beast.ftbquests.quest.task.TaskData;
-import com.feed_the_beast.ftbquests.quest.task.TaskType;
-import com.feed_the_beast.ftbquests.quest.task.XPTask;
+import com.feed_the_beast.ftbquests.quest.task.*;
 import com.feed_the_beast.ftbquests.tile.TileLootCrateOpener;
 import com.feed_the_beast.ftbquests.tile.TileLootCrateStorage;
 import com.feed_the_beast.ftbquests.tile.TileProgressDetector;
@@ -185,6 +169,7 @@ public class FTBQuestsEventHandler
 				FTBQuestsTasks.ITEM = new TaskType(ItemTask::new).setRegistryName("item").setIcon(Icon.getIcon("minecraft:items/diamond")),
 				FTBQuestsTasks.FLUID = new TaskType(FluidTask::new).setRegistryName("fluid").setIcon(Icon.getIcon(FluidRegistry.WATER.getStill(new FluidStack(FluidRegistry.WATER, Fluid.BUCKET_VOLUME)).toString()).combineWith(Icon.getIcon(FluidTask.TANK_TEXTURE.toString()))),
 				FTBQuestsTasks.FORGE_ENERGY = new TaskType(ForgeEnergyTask::new).setRegistryName("forge_energy").setIcon(Icon.getIcon(ForgeEnergyTask.EMPTY_TEXTURE.toString()).combineWith(Icon.getIcon(ForgeEnergyTask.FULL_TEXTURE.toString()))),
+				FTBQuestsTasks.BIOME = new TaskType(BiomeTask::new).setRegistryName("biome").setIcon(Icon.getIcon("minecraft:blocks/jungle_sapling")),
 				FTBQuestsTasks.CUSTOM = new TaskType(CustomTask::new).setRegistryName("custom").setIcon(GuiIcons.COLOR_HSB),
 				FTBQuestsTasks.XP = new TaskType(XPTask::new).setRegistryName("xp").setIcon(Icon.getIcon("minecraft:items/experience_bottle")),
 				FTBQuestsTasks.DIMENSION = new TaskType(DimensionTask::new).setRegistryName("dimension").setIcon(Icon.getIcon("minecraft:blocks/portal")),

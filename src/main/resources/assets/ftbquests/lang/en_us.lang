@@ -1,4 +1,4 @@
-ftbquests=FTB Quests
+ftbquests=FTB Quests Reloaded
 
 tile.ftbquests.screen.missing_data=Broken Block / Missing Data!
 tile.ftbquests.screen.name=Task Screen
@@ -245,6 +245,9 @@ ftbquests.task.ftbquests.fluid.amount=Amount
 ftbquests.task.ftbquests.forge_energy=Forge Energy
 ftbquests.task.ftbquests.forge_energy.value=FE / RF
 ftbquests.task.ftbquests.forge_energy.text=%d FE
+
+ftbquests.task.ftbquests.biome=Biome
+ftbquests.task.ftbquests.biome.text=Visit biome
 
 ftbquests.task.ftbquests.custom=Custom
 
