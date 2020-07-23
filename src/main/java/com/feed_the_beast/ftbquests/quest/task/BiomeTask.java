@@ -95,8 +95,12 @@ public class BiomeTask extends Task {
         @Override
         public boolean canSubmit(EntityPlayerMP player)
         {
-            long start = new Date().getTime();
-            while(new Date().getTime() - start < 1000L){}
+            boolean first = false;
+            if (first = false) {
+                long start = new Date().getTime();
+                while (new Date().getTime() - start < 1000L) {}
+                first = true;
+            }
             Minecraft mc = Minecraft.getMinecraft();
             String biome = Objects.requireNonNull(ForgeRegistries.BIOMES.getKey(mc.world.getBiome(new BlockPos(Objects.requireNonNull(mc.getRenderViewEntity()).posX, mc.getRenderViewEntity().getEntityBoundingBox().minY, mc.getRenderViewEntity().posZ)))).toString();
             return task.biome.toString().contains(biome);
