@@ -4,6 +4,7 @@ import com.feed_the_beast.ftblib.events.FTBLibPreInitRegistryEvent;
 import com.feed_the_beast.ftblib.lib.gui.GuiIcons;
 import com.feed_the_beast.ftblib.lib.icon.Icon;
 import com.feed_the_beast.ftblib.lib.util.BlockUtils;
+import com.feed_the_beast.ftbquests.quest.task.BiomeTask;
 import com.feed_the_beast.ftbquests.block.BlockDetector;
 import com.feed_the_beast.ftbquests.block.BlockLootCrateOpener;
 import com.feed_the_beast.ftbquests.block.BlockLootCrateStorage;
@@ -71,6 +72,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerDropsEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -85,7 +87,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @author LatvianModder
+ * @author LatvianModder and DreamingCodes
  */
 @Mod.EventBusSubscriber(modid = FTBQuests.MOD_ID)
 public class FTBQuestsEventHandler
@@ -141,7 +143,11 @@ public class FTBQuestsEventHandler
 			GameRegistry.registerTileEntity(variant.clazz, new ResourceLocation(FTBQuests.MOD_ID, variant.getName() + "_detector"));
 		}
 	}
-
+	@SubscribeEvent
+	public void Unload(PlayerLoggedOutEvent event) {
+		System.out.println("Unload 1");
+		com.feed_the_beast.ftbquests.quest.task.BiomeTask.Data.setCiao();
+	}
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event)
 	{
@@ -169,7 +175,7 @@ public class FTBQuestsEventHandler
 				FTBQuestsTasks.ITEM = new TaskType(ItemTask::new).setRegistryName("item").setIcon(Icon.getIcon("minecraft:items/diamond")),
 				FTBQuestsTasks.FLUID = new TaskType(FluidTask::new).setRegistryName("fluid").setIcon(Icon.getIcon(FluidRegistry.WATER.getStill(new FluidStack(FluidRegistry.WATER, Fluid.BUCKET_VOLUME)).toString()).combineWith(Icon.getIcon(FluidTask.TANK_TEXTURE.toString()))),
 				FTBQuestsTasks.FORGE_ENERGY = new TaskType(ForgeEnergyTask::new).setRegistryName("forge_energy").setIcon(Icon.getIcon(ForgeEnergyTask.EMPTY_TEXTURE.toString()).combineWith(Icon.getIcon(ForgeEnergyTask.FULL_TEXTURE.toString()))),
-				FTBQuestsTasks.BIOME = new TaskType(BiomeTask::new).setRegistryName("biome").setIcon(Icon.getIcon("minecraft:blocks/jungle_sapling")),
+				FTBQuestsTasks.BIOME = new TaskType(BiomeTask::new).setRegistryName("biome").setIcon(Icon.getIcon("minecraft:blocks/oak_sapling")),
 				FTBQuestsTasks.CUSTOM = new TaskType(CustomTask::new).setRegistryName("custom").setIcon(GuiIcons.COLOR_HSB),
 				FTBQuestsTasks.XP = new TaskType(XPTask::new).setRegistryName("xp").setIcon(Icon.getIcon("minecraft:items/experience_bottle")),
 				FTBQuestsTasks.DIMENSION = new TaskType(DimensionTask::new).setRegistryName("dimension").setIcon(Icon.getIcon("minecraft:blocks/portal")),
