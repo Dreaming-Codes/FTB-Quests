@@ -21,6 +21,9 @@ tile.ftbquests.chest.input_desc=Положите вещи сюда, чтобы �
 tile.ftbquests.chest.output=Слот для выхода
 tile.ftbquests.chest.output_desc=Награды и лишние предметы будут лежать тут
 
+ftbquests.task.ftbquests.biome=Biome
+ftbquests.task.ftbquests.biome.text=Visit biome
+
 itemGroup.ftbquests=Квесты FTB
 sidebar_button.ftbquests.quests=Квесты
 key.ftbquests.quests=Открыть квесты

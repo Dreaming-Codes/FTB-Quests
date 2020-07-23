@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author LatvianModder
+ * @author LatvianModder and DreamingCodes
  */
 public class KillTask extends Task
 {

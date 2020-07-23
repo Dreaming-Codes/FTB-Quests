@@ -1,4 +1,7 @@
-ftbquests=FTB Quests
+ftbquests=FTB Quests Reloaded
+
+ftbquests.task.ftbquests.biome=Biome
+ftbquests.task.ftbquests.biome.text=Visit biome
 
 tile.ftbquests.screen.missing_data=Bloque roto / Datos perdidos!
 tile.ftbquests.screen.name=Pantalla de tarea

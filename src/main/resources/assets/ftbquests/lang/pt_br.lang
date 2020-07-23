@@ -9,6 +9,9 @@ tile.ftbquests.screen.input_mode_icon=Ícone do Modo de Entrada
 tile.ftbquests.screen.fullscreen=Tela cheia
 tile.ftbquests.screen.hide_icons=Esconder ícones
 
+ftbquests.task.ftbquests.biome=Biome
+ftbquests.task.ftbquests.biome.text=Visit biome
+
 tile.ftbquests.progress_detector.name=Detector de Progresso de Quests
 tile.ftbquests.progress_detector.object=ID do Objeto
 tile.ftbquests.progress_detector.level=Nível de Saída
@@ -32,7 +35,7 @@ ftbquests.rarity.rare=Raro
 ftbquests.rarity.epic=Épico
 ftbquests.rarity.legendary=Lendário
 
-itemGroup.ftbquests=FTB Quests
+itemGroup.ftbquests=FTB Quests Reloaded
 sidebar_button.ftbquests.quests=Quests
 key.ftbquests.quests=Abrir Quests
 

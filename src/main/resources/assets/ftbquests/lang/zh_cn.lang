@@ -9,6 +9,9 @@ tile.ftbquests.screen.input_mode_icon=输入模式图标
 tile.ftbquests.screen.fullscreen=全屏
 tile.ftbquests.screen.hide_icons=隐藏图标
 
+ftbquests.task.ftbquests.biome=Biome
+ftbquests.task.ftbquests.biome.text=Visit biome
+
 tile.ftbquests.progress_detector.name=任务进度检测器
 tile.ftbquests.progress_detector.object=章节 ID
 tile.ftbquests.progress_detector.level=输出等级
@@ -30,7 +33,7 @@ ftbquests.rarity.rare=罕见
 ftbquests.rarity.epic=史诗
 ftbquests.rarity.legendary=传奇
 
-itemGroup.ftbquests=FTB Quests
+itemGroup.ftbquests=FTB Quests Reloaded
 sidebar_button.ftbquests.quests=任务
 sidebar_button.ftbquests.quests.no_team=加入一个团队来完成任务！
 key.ftbquests.quests=打开任务
