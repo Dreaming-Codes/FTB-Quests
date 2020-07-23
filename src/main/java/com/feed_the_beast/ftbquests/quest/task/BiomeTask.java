@@ -14,6 +14,8 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -93,9 +95,11 @@ public class BiomeTask extends Task {
         @Override
         public boolean canSubmit(EntityPlayerMP player)
         {
+            long start = new Date().getTime();
+            while(new Date().getTime() - start < 1000L){}
             Minecraft mc = Minecraft.getMinecraft();
             String biome = Objects.requireNonNull(ForgeRegistries.BIOMES.getKey(mc.world.getBiome(new BlockPos(Objects.requireNonNull(mc.getRenderViewEntity()).posX, mc.getRenderViewEntity().getEntityBoundingBox().minY, mc.getRenderViewEntity().posZ)))).toString();
-            return biome.contains(task.biome);
+            return task.biome.toString().contains(biome);
         }
     }
 }
